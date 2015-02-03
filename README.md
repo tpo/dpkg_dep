@@ -21,7 +21,7 @@ software.
 On plain Debian, you can achieve the same effect by using the
 [equivs](http://packages.debian.org/equivs).
 
-This mode implements the same idea for ansible
+This module implements the same idea for ansible.
 
 Installation
 ============
@@ -32,7 +32,7 @@ modules.
 
     cd $ANSIBLE && mkdir library
 
-Now copy the dpkg_deb module into the library:
+Now copy the dpkg_dep module into the library:
 
     cd library && wget https://github.com/tpo/dpkg_dep/raw/master/dpkg_dep    
 
