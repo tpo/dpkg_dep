@@ -40,11 +40,11 @@ Usage
 =====
 
     - name: create foo dependencies
-      dpkg_dep: name=foo version=0.1 depends="dpkg (>=1.17.23)"
+      dpkg_dep: name=foo-dependencies version=0.1 depends="dpkg (>=1.17.23)"
       register: foo
 
     - name: install foo dependencies
-      apt: deb=/var/cache/apt/archives/foo_0.1_all.deb
+      apt: deb=/var/cache/apt/archives/foo-dependencies_0.1_all.deb
       when: foo.changed
 
 Help
@@ -62,8 +62,8 @@ version_added: "1.8"
 options:
     name:
         description:
-            - Name of the package. A suffix "-dependencies" gets automatically added
-              to the package name
+            - Name of the package. It is suggested to call the package something like
+              "mysoftware-dependencies"
         required: true
     version:
         description:
