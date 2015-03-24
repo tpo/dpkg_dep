@@ -63,9 +63,6 @@ import os
 import re
 import tempfile
 
-# for debugging
-import pdb
-
 # import module snippets
 from ansible.module_utils.basic import *
 
