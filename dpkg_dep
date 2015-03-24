@@ -118,8 +118,7 @@ Description: dependencies for %s
             ["mv", "%s.deb" % package_name_full, "/var/cache/apt/archives/"], cwd=build_dir, check_rc=True )
 
     # clean up
-    mode = os.stat(build_dir).st_mode
-    if S_ISDIR(mode):
+    if os.path.isdir(build_dir):
         # build_dir only set if we did create the package...
         rc, out, err = module.run_command( ["rm", "-r", build_dir] )
 
