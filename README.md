@@ -3,7 +3,7 @@
 Abstract
 ========
 
-This is a module for ansible that can be used to create pseudo
+This is a module for ansible that can be used to create meta
 packages that only serve to maintain dependencies.
 
 Rationale
@@ -53,10 +53,10 @@ Help
 <pre>
 module: dpkg_dep
 author: Tomas Pospisek
-short_description: Create a pseudo package that has dependencies on given packages
+short_description: Create a meta package that has dependencies on given packages
 description:
     - This module can be used to maintain dependencies for installed software. It creates
-      a pseudo package with given parameters in /var/cache/apt/archives on the remote
+      a meta package with given parameters in /var/cache/apt/archives on the remote
       machine, that can be installed with the apt module.
 version_added: "1.8"
 options:

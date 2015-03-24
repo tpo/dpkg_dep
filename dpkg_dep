@@ -28,10 +28,10 @@ DOCUMENTATION = '''
 ---
 module: dpkg_dep
 author: Tomas Pospisek
-short_description: Create a pseudo package that has dependencies on given packages
+short_description: Create a meta package that has dependencies on given packages
 description:
     - This module can be used to maintain dependencies for installed software. It creates
-      a pseudo package with given parameters in /var/cache/apt/archives on the remote
+      a meta package with given parameters in /var/cache/apt/archives on the remote
       machine, that can be installed with the apt module.
 version_added: "1.8"
 options:
