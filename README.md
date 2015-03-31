@@ -45,7 +45,7 @@ Usage
 
     - name: install foo dependencies
       apt: deb=/var/cache/apt/archives/foo-dependencies_0.1_all.deb
-      when: foo.changed
+      when: not foo.check_mode and foo.changed
 
 Help
 ====
@@ -58,6 +58,9 @@ description:
     - This module can be used to maintain dependencies for installed software. It creates
       a meta package with given parameters in /var/cache/apt/archives on the remote
       machine, that can be installed with the apt module.
+      When run in 'check mode', the result's 'check_mode' property will be set
+      to 'True'. This property can then be used to skip the following 'apt' command. See
+      the examples section.
 version_added: "1.8"
 options:
     name:
